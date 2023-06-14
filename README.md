@@ -27,8 +27,9 @@ const archive = archiver('zip', {
 // 'close' event is fired only when a file descriptor is involved
 output.on('close', function() {
   console.log(archive.pointer() + ' total bytes');
-  console.log('archiver has been finalized and the output file descriptor has closed.');
+  console.log('archiver has been finalized and the output file descriptor has closed. this is a change');
 });
+
 
 // This event is fired when the data source is drained no matter what was the data source.
 // It is not part of this library but rather from the NodeJS Stream API.
